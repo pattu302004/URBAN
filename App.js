@@ -4,9 +4,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import FPDashboard from "../../FieldPerson/src/components/FPDashboard"
-import FPLogin from "./components/FPLogin";
-import FPRegister from "./components/FPRegister";
+import MunicipalDashboard from "../../municipal/src/components/Municipal";
 import Appbar from './components/Appbar';
 export default function App() {
 const theme = createTheme(); 
@@ -16,9 +14,7 @@ const theme = createTheme();
       <Router>
         <Appbar/>
         <Routes>
-          <Route path="/Rgister" element={<FPRegister />} />
-          <Route path="/Login" element={<FPLogin />} />
-          <Route path="/field-person-dashboard" element={<FPDashboard />}/>
+          <Route path="/" element={<MunicipalDashboard />} />
         </Routes>
       </Router>
     </ThemeProvider>
